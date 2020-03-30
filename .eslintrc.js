@@ -6,11 +6,14 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'prettier',
+    'prettier/react'
   ],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
+  parser:'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -20,6 +23,7 @@ module.exports = {
   },
   plugins: [
     'react',
+    'prettier'
   ],
   rules: {
   },
