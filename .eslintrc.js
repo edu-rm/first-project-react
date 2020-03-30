@@ -26,5 +26,11 @@ module.exports = {
     'prettier'
   ],
   rules: {
+    'prettier/prettier': 'error',//Todas as regras que não estão de acordo com nosso cód o prettier apontará como erro
+    'react/jsx-filename-extension': [
+      'warn',
+      { extensions: ['.jsx', '.js']}
+    ],
+    'import/prefer-default-export': 'off' //Desativando: Se tiver apenas um export dentro de um arquivo ele será obrigado ser um export default
   },
 };
