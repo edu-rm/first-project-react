@@ -4,7 +4,6 @@ module.exports = {
     es6: true,
   },
   extends: [
-    'plugin:react/recommended',
     'airbnb',
     'prettier',
     'prettier/react'
@@ -31,6 +30,7 @@ module.exports = {
       'warn',
       { extensions: ['.jsx', '.js']}
     ],
-    'import/prefer-default-export': 'off' //Desativando: Se tiver apenas um export dentro de um arquivo ele será obrigado ser um export default
+    'import/prefer-default-export': 'off', //Desativando: Se tiver apenas um export dentro de um arquivo ele será obrigado ser um export default
+    'state-in-constructor' : 'never'
   },
 };
