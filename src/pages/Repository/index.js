@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import api from '../../services/api';
+import { FaArrowLeft } from 'react-icons/fa';
 
 import Container from '../../components/container';
-import { Loading } from './styles';
+import { Loading, Owner } from './styles';
 
 export default class Repository extends Component {
   static propTypes = PropTypes.shape({
@@ -50,7 +52,16 @@ export default class Repository extends Component {
     }
 
     return (
-      <Container></Container>
+      <Container>
+        <Link to="/">
+          <FaArrowLeft color="#0077b5" size={20} />
+        </Link>
+        <Owner>
+          <img src={repository.owner.avatar_url} alt={repository.owner.login}/>
+          <h1>{repository.name}</h1>
+          <p>{repository.description}</p>
+        </Owner>
+      </Container>
     );
   }
 }
